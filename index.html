@@ -10,7 +10,8 @@
 <body>
     <div id="app">
         <div id="user">
-            <h2>{{user}} est connecté</h2>
+            <input type="text" v-model="user"/>
+            <h2>Votre nom de dresseur est : {{user}}</h2>
         </div>
 
         <div class="team">
@@ -20,7 +21,9 @@
 
         <div class="pokemonList">
             <h3> Liste des pokémons </h3>
-            <!-- implement pokemon functionnality -->
+            <ul>
+                <li v-for="pokemon in pokemonList">{{pokemon.name}}</li>
+            </ul>
         </div>
     </div>
     <script src="./app.js"></script>
