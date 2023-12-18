@@ -1,4 +1,8 @@
 var app = new Vue({
   el: "#app",
 
+  data:{
+    user : "Adamos"
+  }
+
 });
