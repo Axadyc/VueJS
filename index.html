@@ -14,15 +14,28 @@
             <h2>Votre nom de dresseur est : {{user}}</h2>
         </div>
 
-        <div class="team">
-            <h3> Mon équipe</h3>
-            <!-- implement team functionnality -->
+        <div v-if="myTeam.length !== 0 "class="team">
+            <h3>Votre équipe</h3>
+            <ul>    
+                <li v-for="(pokemon, i) in myTeam">
+                    <h3>{{pokemon.name.french}}</h3>
+                    <img :src="'./data/thumbnails/'+pokemon.id+'.png'"/>
+                    <button @click="removePokemon(i)">supprimer</button>
+                </li>
+            </ul>
         </div>
+        <!-- <div v-else class="team">
+            <h3>L'équipe est vide</h3>
+        </div> -->
 
         <div class="pokemonList">
             <h3> Liste des pokémons </h3>
             <ul>
-                <li v-for="pokemon in pokemonList">{{pokemon.name}}</li>
+                <li v-for="pokemon in pokemonList">
+                    <h3>{{pokemon.name.french}}</h3>
+                    <img :src="'./data/thumbnails/'+pokemon.id+'.png'"/>
+                    <button @click="addPokemon(pokemon)">ajouter</button>
+                </li>
             </ul>
         </div>
     </div>

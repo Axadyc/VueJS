@@ -23,7 +23,7 @@ body{
     text-align:center;
     margin:auto 1em;
     padding: 1em 0;
-    color:white;
+    color:rgb(2, 2, 2);
   }
   
   .pokemonList ul, .team ul{
@@ -38,6 +38,10 @@ body{
     background: #425a92;
     border-radius:20px;
   }
+
+  .team ul li {
+    background-color: #1f3cbd;
+  }
   
   .pokemonList img, .team img{
     padding-top: 10px;
@@ -49,6 +53,6 @@ body{
     margin: 1em auto;
     border-radius: 20px;
     width: 80%;
-      background-color: #b6dbff;
-      color: white;
+      background-color: #98f5c2;
+      color: rgb(1, 126, 57);
   }
